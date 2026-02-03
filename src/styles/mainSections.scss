@@ -1,0 +1,33 @@
+.main {
+  background-color: #fff;
+
+  &__content {
+    row-gap: 96px;
+    padding-block: 64px;
+
+    @include on-tablet {
+      padding-block: 120px;
+      row-gap: 120px;
+    }
+    @include on-desktop {
+      padding-block: 120px;
+      row-gap: 120px;
+    }
+  }
+}
+
+.container {
+  @include content-padding-inline;
+}
+
+.gallery__full img {
+  width: 100%;
+  display: block;
+  margin-top: 32px;
+  @include on-tablet {
+    margin-top: 0;
+  }
+  @include on-desktop {
+    margin-top: 0;
+  }
+}

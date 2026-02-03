@@ -1,0 +1,118 @@
+.contacts {
+  &__container {
+    @include page-grid;
+
+    margin-top: 104px;
+
+    @include on-tablet {
+      margin-top: 120px;
+    }
+    @include on-desktop {
+      margin-top: 120px;
+    }
+  }
+
+  &__title {
+    grid-column: 1/-1;
+
+    @include on-desktop {
+      grid-column: 1 / span 5;
+    }
+  }
+
+  &__forms {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    grid-column: 1/-1;
+
+    @include on-desktop {
+      grid-column: 1 / span 5;
+    }
+
+    input {
+      font-family: 'Space Mono', monospace;
+      height: 48px;
+    }
+
+    textarea {
+      font-family: 'Space Mono', monospace;
+      height: 148px;
+      resize: none;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-family: 'Space Mono', monospace;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    height: 56px;
+    padding-inline: 48px;
+    box-sizing: border-box;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid $main-text-color;
+
+    @include on-desktop {
+      grid-column: 1 / span 5;
+    }
+
+    background-color: $main-text-color;
+    color: $color-white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    @include transition(background-color, color);
+    &:hover,
+    &:focus-visible {
+      background-color: $background-color-hover;
+      color: $main-text-color;
+    }
+
+    &:active {
+      background-color: $background-color-active;
+      color: $color-white;
+    }
+  }
+
+  &__info {
+    grid-column: 1 / -1;
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include on-desktop {
+      margin-top: 0;
+      grid-column: 7 / span 4;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #9a9a9a;
+  }
+
+  &__value {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    line-height: 140%;
+    @include transition(color);
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

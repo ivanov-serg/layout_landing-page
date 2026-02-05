@@ -3,15 +3,9 @@
   width: 24px;
   height: 24px;
 
-  &--phone {
-    background-image: url(../../icons/icon-phone.png);
-  }
-
-  &--menu {
-    background-image: url(../../icons/Icon-burger-menu.png);
-  }
-
-  &--close {
-    background-image: url(../../icons/Icon-Close.png);
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 }

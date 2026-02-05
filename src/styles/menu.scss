@@ -39,3 +39,11 @@
     border-bottom: 1px solid $main-text-color;
   }
 }
+
+@include on-desktop {
+  .menu .nav__item a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+}

@@ -36,3 +36,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+a:hover,
+button:hover,
+.icon:hover,
+select:hover,
+label:hover {
+  cursor:
+    url(../../icons/Vector.svg) 12 12,
+    pointer;
+}

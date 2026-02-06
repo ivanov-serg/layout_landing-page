@@ -48,31 +48,17 @@
     display: flex;
     align-items: center;
     gap: 24px;
-  }
 
-  &__phone-number {
-    display: none;
+    @include on-tablet {
+      gap: 32px;
+    }
+
+    @include on-desktop {
+      gap: 32px;
+    }
   }
 
   @include on-desktop {
-    &__phone-number {
-      display: block;
-
-      position: absolute;
-      right: 100%;
-      margin-right: 16px;
-
-      opacity: 0;
-      pointer-events: none;
-      white-space: nowrap;
-      transition: opacity 0.2s;
-    }
-
-    .icon--phone:hover ~ .top-bar__phone-number {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
     .icon--menu:hover img {
       content: url(../../icons/Icon-Burger-menu-hover.svg);
     }
